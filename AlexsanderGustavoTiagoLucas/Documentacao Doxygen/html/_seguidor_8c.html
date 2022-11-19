@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Seguidor de Linha: Referência do Arquivo Documentacao/Seguidor/Seguidor.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Seguidor de Linha<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Projeto de um veículo seguidor de linha.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9c94bdc00bd70992c2c77405b2334d4f.html">Documentacao</a></li><li class="navelem"><a class="el" href="dir_df308aea5287ed64189698e8178c5d92.html">Seguidor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo Seguidor.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
+<code>#include &lt;avr/interrupt.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</a>&#160;&#160;&#160;16000000</td></tr>
+<tr class="separator:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba4c5862e2e97b55ede827cc970f3fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a>(ADDRESS,  BIT)&#160;&#160;&#160;(ADDRESS &amp;= ~(1&lt;&lt;BIT))</td></tr>
+<tr class="separator:a9ba4c5862e2e97b55ede827cc970f3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0724532369ee5d568fd4f5e96abafb55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(ADDRESS,  BIT)&#160;&#160;&#160;(ADDRESS |= (1&lt;&lt;BIT))</td></tr>
+<tr class="separator:a0724532369ee5d568fd4f5e96abafb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1277abbecdb0df171c6e1df4ae3811ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a>(ADDRESS,  BIT)&#160;&#160;&#160;(ADDRESS &amp; (1&lt;&lt;BIT))</td></tr>
+<tr class="separator:a1277abbecdb0df171c6e1df4ae3811ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bee8b6b74d884693d799eb4d2dc564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#af4bee8b6b74d884693d799eb4d2dc564">CLEAR_PWM_VALUE</a>(ENVIROLMENT)&#160;&#160;&#160;(ENVIROLMENT = 0)</td></tr>
+<tr class="separator:af4bee8b6b74d884693d799eb4d2dc564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3519967169f23cbc7ae5c80a8550692"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(ENVIROLMENT,  VALUE)&#160;&#160;&#160;(ENVIROLMENT = VALUE)</td></tr>
+<tr class="separator:ab3519967169f23cbc7ae5c80a8550692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a133ed1a49478fb7bb1342ca544c6d488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a133ed1a49478fb7bb1342ca544c6d488">configureIO</a> ()</td></tr>
+<tr class="separator:a133ed1a49478fb7bb1342ca544c6d488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882a3542a3b70772b13c57af57c6ac4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a882a3542a3b70772b13c57af57c6ac4f">configureInterrupt</a> ()</td></tr>
+<tr class="separator:a882a3542a3b70772b13c57af57c6ac4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3c143f55e90d02d1bf68b7a6c21aa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a8a3c143f55e90d02d1bf68b7a6c21aa6">configurePWM</a> ()</td></tr>
+<tr class="separator:a8a3c143f55e90d02d1bf68b7a6c21aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea150fcd685610cb9f7672fce361e53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#afea150fcd685610cb9f7672fce361e53">ISR</a> (INT0_vect)</td></tr>
+<tr class="separator:afea150fcd685610cb9f7672fce361e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22acfb428840c6d9aa212764589cf6c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a22acfb428840c6d9aa212764589cf6c6">ISR</a> (INT1_vect)</td></tr>
+<tr class="separator:a22acfb428840c6d9aa212764589cf6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:af7abfe93e2ea0325e6d6d615c6612235"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a> = 160</td></tr>
+<tr class="separator:af7abfe93e2ea0325e6d6d615c6612235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902f0c71f873bc9f63e11622947880ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_seguidor_8c.html#a902f0c71f873bc9f63e11622947880ec">STOP_TIME_MS</a> = 50</td></tr>
+<tr class="separator:a902f0c71f873bc9f63e11622947880ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Definições e macros</h2>
+<a id="a1277abbecdb0df171c6e1df4ae3811ab" name="a1277abbecdb0df171c6e1df4ae3811ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1277abbecdb0df171c6e1df4ae3811ab">&#9670;&#160;</a></span>CHECKBIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECKBIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ADDRESS, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BIT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ADDRESS &amp; (1&lt;&lt;BIT))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4bee8b6b74d884693d799eb4d2dc564" name="af4bee8b6b74d884693d799eb4d2dc564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bee8b6b74d884693d799eb4d2dc564">&#9670;&#160;</a></span>CLEAR_PWM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLEAR_PWM_VALUE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ENVIROLMENT</td><td>)</td>
+          <td>&#160;&#160;&#160;(ENVIROLMENT = 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ba4c5862e2e97b55ede827cc970f3fe" name="a9ba4c5862e2e97b55ede827cc970f3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba4c5862e2e97b55ede827cc970f3fe">&#9670;&#160;</a></span>CLEARBIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLEARBIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ADDRESS, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BIT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ADDRESS &amp;= ~(1&lt;&lt;BIT))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43bafb28b29491ec7f871319b5a3b2f8" name="a43bafb28b29491ec7f871319b5a3b2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43bafb28b29491ec7f871319b5a3b2f8">&#9670;&#160;</a></span>F_CPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F_CPU&#160;&#160;&#160;16000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3519967169f23cbc7ae5c80a8550692" name="ab3519967169f23cbc7ae5c80a8550692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3519967169f23cbc7ae5c80a8550692">&#9670;&#160;</a></span>SET_PWM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_PWM_VALUE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ENVIROLMENT, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">VALUE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ENVIROLMENT = VALUE)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0724532369ee5d568fd4f5e96abafb55" name="a0724532369ee5d568fd4f5e96abafb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0724532369ee5d568fd4f5e96abafb55">&#9670;&#160;</a></span>SETBIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SETBIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ADDRESS, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BIT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ADDRESS |= (1&lt;&lt;BIT))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a882a3542a3b70772b13c57af57c6ac4f" name="a882a3542a3b70772b13c57af57c6ac4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882a3542a3b70772b13c57af57c6ac4f">&#9670;&#160;</a></span>configureInterrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configureInterrupt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                          {</div>
+<div class="line"><span class="lineno">   38</span>    </div>
+<div class="line"><span class="lineno">   39</span>    <span class="comment">/* </span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment">        Primariamente iremos configurar/habilitar o INT0 e INT1</span></div>
+<div class="line"><span class="lineno">   41</span><span class="comment">        Respectivamente no arduino </span></div>
+<div class="line"><span class="lineno">   42</span><span class="comment">        PD2: INT0 (ATMega, PORTD2) </span></div>
+<div class="line"><span class="lineno">   43</span><span class="comment">        PD3: INT1 (ATMega, PORTD3)</span></div>
+<div class="line"><span class="lineno">   44</span><span class="comment">    */</span> </div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="comment">// Habilitando Interrupções: INT0 e INT 1</span></div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(EIMSK, INT0);</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(EIMSK, INT1);</div>
+<div class="line"><span class="lineno">   49</span>    </div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   51</span><span class="comment">        Configurando interrupções no seguinte pattern:</span></div>
+<div class="line"><span class="lineno">   52</span><span class="comment">        INT0: </span></div>
+<div class="line"><span class="lineno">   53</span><span class="comment">            Quando houver alteração de nivel lógico: </span></div>
+<div class="line"><span class="lineno">   54</span><span class="comment">                ISC01: 0</span></div>
+<div class="line"><span class="lineno">   55</span><span class="comment">                ISC00: 1</span></div>
+<div class="line"><span class="lineno">   56</span><span class="comment">        INT1: </span></div>
+<div class="line"><span class="lineno">   57</span><span class="comment">            Quando houver alteração de nivel lógico:</span></div>
+<div class="line"><span class="lineno">   58</span><span class="comment">                ISC11: 0</span></div>
+<div class="line"><span class="lineno">   59</span><span class="comment">                ISC10: 1</span></div>
+<div class="line"><span class="lineno">   60</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   61</span>    </div>
+<div class="line"><span class="lineno">   62</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(EICRA, ISC00);</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(EICRA, ISC10);</div>
+<div class="line"><span class="lineno">   64</span>    </div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_define" href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a>(EICRA, ISC01);</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_define" href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a>(EICRA, ISC11); </div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">//Habilitando interrupções globais</span></div>
+<div class="line"><span class="lineno">   69</span>    sei(); </div>
+<div class="line"><span class="lineno">   70</span>}</div>
+<div class="ttc" id="a_seguidor_8c_html_a0724532369ee5d568fd4f5e96abafb55"><div class="ttname"><a href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a></div><div class="ttdeci">#define SETBIT(ADDRESS, BIT)</div><div class="ttdef"><b>Definition:</b> Seguidor.c:5</div></div>
+<div class="ttc" id="a_seguidor_8c_html_a9ba4c5862e2e97b55ede827cc970f3fe"><div class="ttname"><a href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a></div><div class="ttdeci">#define CLEARBIT(ADDRESS, BIT)</div><div class="ttdef"><b>Definition:</b> Seguidor.c:4</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a133ed1a49478fb7bb1342ca544c6d488" name="a133ed1a49478fb7bb1342ca544c6d488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133ed1a49478fb7bb1342ca544c6d488">&#9670;&#160;</a></span>configureIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configureIO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                  {</div>
+<div class="line"><span class="lineno">   18</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   19</span><span class="comment">        Configurando portas no pattern:</span></div>
+<div class="line"><span class="lineno">   20</span><span class="comment">            PORTD:</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment">                2: Entrada (Sensor)</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment">                3: Entrada (Sensor)</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment">                5: Saída (Motor 1)</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">                6: Saída (Motor 2)</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   26</span>    </div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// Configurando as entradas;</span></div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_define" href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a>(DDRD, PORTD2);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_define" href="_seguidor_8c.html#a9ba4c5862e2e97b55ede827cc970f3fe">CLEARBIT</a>(DDRD, PORTD3);</div>
+<div class="line"><span class="lineno">   30</span>    </div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment">//Configurando as Saídas;</span></div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(DDRD, PORTD5);</div>
+<div class="line"><span class="lineno">   33</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(DDRD, PORTD6); </div>
+<div class="line"><span class="lineno">   34</span>    </div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8a3c143f55e90d02d1bf68b7a6c21aa6" name="a8a3c143f55e90d02d1bf68b7a6c21aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3c143f55e90d02d1bf68b7a6c21aa6">&#9670;&#160;</a></span>configurePWM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configurePWM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                   {</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   75</span><span class="comment">        Configurando PWM:</span></div>
+<div class="line"><span class="lineno">   76</span><span class="comment">            Configurando TCCR0A:</span></div>
+<div class="line"><span class="lineno">   77</span><span class="comment">                Configurações:</span></div>
+<div class="line"><span class="lineno">   78</span><span class="comment">                    - No Prescaler</span></div>
+<div class="line"><span class="lineno">   79</span><span class="comment">                    - Non-Inverting Fast PWM</span></div>
+<div class="line"><span class="lineno">   80</span><span class="comment">                    - Using OCR A Unit</span></div>
+<div class="line"><span class="lineno">   81</span><span class="comment">                    - Using OCR B Unit</span></div>
+<div class="line"><span class="lineno">   82</span><span class="comment">                    - Mode 3</span></div>
+<div class="line"><span class="lineno">   83</span><span class="comment">                BITS:</span></div>
+<div class="line"><span class="lineno">   84</span><span class="comment">                    7: COM0A1 (1)</span></div>
+<div class="line"><span class="lineno">   85</span><span class="comment">                    5: COMOB1 (1)</span></div>
+<div class="line"><span class="lineno">   86</span><span class="comment">                    1: WGM01 (1)</span></div>
+<div class="line"><span class="lineno">   87</span><span class="comment">                    0: WGM00 (1)</span></div>
+<div class="line"><span class="lineno">   88</span><span class="comment">                    </span></div>
+<div class="line"><span class="lineno">   89</span><span class="comment">            Configurando TCCR0B:</span></div>
+<div class="line"><span class="lineno">   90</span><span class="comment">                Configurações:</span></div>
+<div class="line"><span class="lineno">   91</span><span class="comment">                    - No Prescaler</span></div>
+<div class="line"><span class="lineno">   92</span><span class="comment">                BITS:</span></div>
+<div class="line"><span class="lineno">   93</span><span class="comment">                    0: CS00 (1)</span></div>
+<div class="line"><span class="lineno">   94</span><span class="comment">            </span></div>
+<div class="line"><span class="lineno">   95</span><span class="comment">            Configurando TIMSK0:</span></div>
+<div class="line"><span class="lineno">   96</span><span class="comment">                Configuração:</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment">                    - Habilitando Todos os tipos de interrupção</span></div>
+<div class="line"><span class="lineno">   98</span><span class="comment">                BITS:</span></div>
+<div class="line"><span class="lineno">   99</span><span class="comment">                    0: TOIE0 (1)    </span></div>
+<div class="line"><span class="lineno">  100</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  101</span>    </div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TCCR0A, COM0A1);</div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TCCR0A, COM0B1);</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TCCR0A, WGM01);</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TCCR0A, WGM00);</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TCCR0B, CS00);</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_define" href="_seguidor_8c.html#a0724532369ee5d568fd4f5e96abafb55">SETBIT</a>(TIMSK0, TOIE0);</div>
+<div class="line"><span class="lineno">  108</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afea150fcd685610cb9f7672fce361e53" name="afea150fcd685610cb9f7672fce361e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea150fcd685610cb9f7672fce361e53">&#9670;&#160;</a></span>ISR() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISR </td>
+          <td>(</td>
+          <td class="paramtype">INT0_vect&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  110</span>               {</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a>(PIND, PORTD2)){</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0B, <a class="code hl_variable" href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a>);</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0A, <a class="code hl_variable" href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a>);</div>
+<div class="line"><span class="lineno">  114</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_define" href="_seguidor_8c.html#af4bee8b6b74d884693d799eb4d2dc564">CLEAR_PWM_VALUE</a>(OCR0B);</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a>(PIND, PORTD3)){</div>
+<div class="line"><span class="lineno">  117</span>      <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0A, 255);</div>
+<div class="line"><span class="lineno">  118</span>      _delay_ms(<a class="code hl_variable" href="_seguidor_8c.html#a902f0c71f873bc9f63e11622947880ec">STOP_TIME_MS</a>);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="a_seguidor_8c_html_a1277abbecdb0df171c6e1df4ae3811ab"><div class="ttname"><a href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a></div><div class="ttdeci">#define CHECKBIT(ADDRESS, BIT)</div><div class="ttdef"><b>Definition:</b> Seguidor.c:6</div></div>
+<div class="ttc" id="a_seguidor_8c_html_a902f0c71f873bc9f63e11622947880ec"><div class="ttname"><a href="_seguidor_8c.html#a902f0c71f873bc9f63e11622947880ec">STOP_TIME_MS</a></div><div class="ttdeci">int STOP_TIME_MS</div><div class="ttdef"><b>Definition:</b> Seguidor.c:15</div></div>
+<div class="ttc" id="a_seguidor_8c_html_ab3519967169f23cbc7ae5c80a8550692"><div class="ttname"><a href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a></div><div class="ttdeci">#define SET_PWM_VALUE(ENVIROLMENT, VALUE)</div><div class="ttdef"><b>Definition:</b> Seguidor.c:12</div></div>
+<div class="ttc" id="a_seguidor_8c_html_af4bee8b6b74d884693d799eb4d2dc564"><div class="ttname"><a href="_seguidor_8c.html#af4bee8b6b74d884693d799eb4d2dc564">CLEAR_PWM_VALUE</a></div><div class="ttdeci">#define CLEAR_PWM_VALUE(ENVIROLMENT)</div><div class="ttdef"><b>Definition:</b> Seguidor.c:11</div></div>
+<div class="ttc" id="a_seguidor_8c_html_af7abfe93e2ea0325e6d6d615c6612235"><div class="ttname"><a href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a></div><div class="ttdeci">int DEFAULT_PWM_VALUE</div><div class="ttdef"><b>Definition:</b> Seguidor.c:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22acfb428840c6d9aa212764589cf6c6" name="a22acfb428840c6d9aa212764589cf6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22acfb428840c6d9aa212764589cf6c6">&#9670;&#160;</a></span>ISR() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISR </td>
+          <td>(</td>
+          <td class="paramtype">INT1_vect&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  123</span>               {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a>(PIND, PORTD3)){</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0A, <a class="code hl_variable" href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a>);</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0B, <a class="code hl_variable" href="_seguidor_8c.html#af7abfe93e2ea0325e6d6d615c6612235">DEFAULT_PWM_VALUE</a>);</div>
+<div class="line"><span class="lineno">  127</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_define" href="_seguidor_8c.html#af4bee8b6b74d884693d799eb4d2dc564">CLEAR_PWM_VALUE</a>(OCR0A);</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="_seguidor_8c.html#a1277abbecdb0df171c6e1df4ae3811ab">CHECKBIT</a>(PIND, PORTD2)){</div>
+<div class="line"><span class="lineno">  130</span>      <a class="code hl_define" href="_seguidor_8c.html#ab3519967169f23cbc7ae5c80a8550692">SET_PWM_VALUE</a>(OCR0B, 255);</div>
+<div class="line"><span class="lineno">  131</span>      _delay_ms(<a class="code hl_variable" href="_seguidor_8c.html#a902f0c71f873bc9f63e11622947880ec">STOP_TIME_MS</a>);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  136</span>           {</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <a class="code hl_function" href="_seguidor_8c.html#a133ed1a49478fb7bb1342ca544c6d488">configureIO</a>();</div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_function" href="_seguidor_8c.html#a882a3542a3b70772b13c57af57c6ac4f">configureInterrupt</a>();</div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_function" href="_seguidor_8c.html#a8a3c143f55e90d02d1bf68b7a6c21aa6">configurePWM</a>();</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">while</span>(1){</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  144</span>    </div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+<div class="ttc" id="a_seguidor_8c_html_a133ed1a49478fb7bb1342ca544c6d488"><div class="ttname"><a href="_seguidor_8c.html#a133ed1a49478fb7bb1342ca544c6d488">configureIO</a></div><div class="ttdeci">void configureIO()</div><div class="ttdef"><b>Definition:</b> Seguidor.c:17</div></div>
+<div class="ttc" id="a_seguidor_8c_html_a882a3542a3b70772b13c57af57c6ac4f"><div class="ttname"><a href="_seguidor_8c.html#a882a3542a3b70772b13c57af57c6ac4f">configureInterrupt</a></div><div class="ttdeci">void configureInterrupt()</div><div class="ttdef"><b>Definition:</b> Seguidor.c:37</div></div>
+<div class="ttc" id="a_seguidor_8c_html_a8a3c143f55e90d02d1bf68b7a6c21aa6"><div class="ttname"><a href="_seguidor_8c.html#a8a3c143f55e90d02d1bf68b7a6c21aa6">configurePWM</a></div><div class="ttdeci">void configurePWM()</div><div class="ttdef"><b>Definition:</b> Seguidor.c:72</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variáveis</h2>
+<a id="af7abfe93e2ea0325e6d6d615c6612235" name="af7abfe93e2ea0325e6d6d615c6612235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7abfe93e2ea0325e6d6d615c6612235">&#9670;&#160;</a></span>DEFAULT_PWM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DEFAULT_PWM_VALUE = 160</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a902f0c71f873bc9f63e11622947880ec" name="a902f0c71f873bc9f63e11622947880ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902f0c71f873bc9f63e11622947880ec">&#9670;&#160;</a></span>STOP_TIME_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int STOP_TIME_MS = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,12 @@
+- 2x transistor tip120
+- 2x resistor 4k onhs
+- 2x diodos 1N40001
+- 10x jumpers macho-femea
+- 8x born 2 entradas
+- 1/2 barra de pinos
+- 1 arduino
+- 2 Sensores LM393
+- 1 Bateria 9v
+- 4 Pilhas
+- 2 Motores DC 3-6v
+- 1 Switch On/Off
