@@ -1,0 +1,9 @@
+Lista de componentes do seguidor de linha:
+
+2x transistor TIP41C
+4x resistores de 300 ohms
+1x Arduino Uno
+2x motores DC
+1x switch on/off
+1x soquete pilha AA
+2x sensores ir08-h
