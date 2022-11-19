@@ -56,7 +56,7 @@ int leituraSensor(){
   if((sensorEsq < 500) && (sensorMeio >= 500) && (sensorDir < 500)){ //Sensor Esq: branco | Sensor Meio: preto | Sensor Dir: branco (linha reta)
     OCR0A = 80;
     OCR0B = 80;
-    _delay_ms(175);
+    
   }
   if((sensorEsq < 500) && (sensorMeio < 500) && (sensorDir >= 500)){ //Sensor Esq: branco | Sensor Meio: branco | Sensor Dir: preto (curva para direita para corrigir)
     OCR0A = 80;
