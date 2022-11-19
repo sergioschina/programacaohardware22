@@ -11,7 +11,8 @@
 #define CLEAR_PWM_VALUE(ENVIROLMENT) (ENVIROLMENT = 0)
 #define SET_PWM_VALUE(ENVIROLMENT, VALUE) (ENVIROLMENT = VALUE)
 
-int DEFAULT_PWM_VALUE = 160; // ~= 63%
+int DEFAULT_PWM_VALUE = 80;
+int DRIFT_PWM_VALUE = 100;
 int STOP_TIME_MS = 50;
 
 void configureIO(){
@@ -114,7 +115,7 @@ ISR(INT0_vect) {
 	}else{
 		CLEAR_PWM_VALUE(OCR0B);
     if(!CHECKBIT(PIND, PORTD3)){
-      SET_PWM_VALUE(OCR0A, 255);
+      SET_PWM_VALUE(OCR0A, DRIFT_PWM_VALUE);
       _delay_ms(STOP_TIME_MS);
     }
 	}
@@ -127,7 +128,7 @@ ISR(INT1_vect) {
 	}else{
 		CLEAR_PWM_VALUE(OCR0A);
     if(!CHECKBIT(PIND, PORTD2)){
-      SET_PWM_VALUE(OCR0B, 255);
+      SET_PWM_VALUE(OCR0B, DRIFT_PWM_VALUE);
       _delay_ms(STOP_TIME_MS);
     }
 	}
