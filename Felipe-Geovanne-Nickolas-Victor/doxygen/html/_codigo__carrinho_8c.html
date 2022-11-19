@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto seguidor de linha grupo 9: Referência do Arquivo D:/Projeto do carrinho/Projeto Seguidor de linha GRUPO 9/Codigo_carrinho.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto seguidor de linha grupo 9<span id="projectnumber">&#160;1.9.3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo D:/Projeto do carrinho/Projeto Seguidor de linha GRUPO 9/Codigo_carrinho.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;avr/io.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</a>&#160;&#160;&#160;16000000</td></tr>
+<tr class="separator:a43bafb28b29491ec7f871319b5a3b2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d98f38f8ff426ce97811db75d6f8ac6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a8d98f38f8ff426ce97811db75d6f8ac6">SETA_BIT</a>(byte,  bit)&#160;&#160;&#160;byte |= (1 &lt;&lt; bit)</td></tr>
+<tr class="separator:a8d98f38f8ff426ce97811db75d6f8ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915487ac505d959a83995c1c2cb87b4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a915487ac505d959a83995c1c2cb87b4d">ZERA_BIT</a>(byte,  bit)&#160;&#160;&#160;byte &amp;= ~(1 &lt;&lt; bit)</td></tr>
+<tr class="separator:a915487ac505d959a83995c1c2cb87b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750c356ef6acfbbf1348138526187366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a750c356ef6acfbbf1348138526187366">INVERTE_BIT</a>(byte,  bit)&#160;&#160;&#160;byte ^= (1 &lt;&lt; bit)</td></tr>
+<tr class="separator:a750c356ef6acfbbf1348138526187366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ab9fe2bd2b884eb1f0754d2ef58af691d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#ab9fe2bd2b884eb1f0754d2ef58af691d">InitAdc</a> ()</td></tr>
+<tr class="separator:ab9fe2bd2b884eb1f0754d2ef58af691d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4f7a0b8addd84785fcf6be3b96a92f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a> (uint8_t ADCchanel)</td></tr>
+<tr class="separator:a8d4f7a0b8addd84785fcf6be3b96a92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a6f7a8f84bf03e494e67ba7c9c74c71f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a6f7a8f84bf03e494e67ba7c9c74c71f9">valorSensorEsq</a></td></tr>
+<tr class="separator:a6f7a8f84bf03e494e67ba7c9c74c71f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419f59a0391f7b955265aa109d51e543"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a419f59a0391f7b955265aa109d51e543">valorSensorMaisEsq</a></td></tr>
+<tr class="separator:a419f59a0391f7b955265aa109d51e543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae26197d9d59c2e7addaa9d46e87a71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#aaae26197d9d59c2e7addaa9d46e87a71">valorSensorDir</a></td></tr>
+<tr class="separator:aaae26197d9d59c2e7addaa9d46e87a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d4c64c455a9b96333a519cb0a65c6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a92d4c64c455a9b96333a519cb0a65c6a">valorSensorMaisDir</a></td></tr>
+<tr class="separator:a92d4c64c455a9b96333a519cb0a65c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a73c34d1c6d2261ef44a860d3a4d44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo__carrinho_8c.html#a25a73c34d1c6d2261ef44a860d3a4d44">velocidadePrincipal</a> = 60</td></tr>
+<tr class="separator:a25a73c34d1c6d2261ef44a860d3a4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Definições e macros</h2>
+<a id="a43bafb28b29491ec7f871319b5a3b2f8" name="a43bafb28b29491ec7f871319b5a3b2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43bafb28b29491ec7f871319b5a3b2f8">&#9670;&#160;</a></span>F_CPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F_CPU&#160;&#160;&#160;16000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a750c356ef6acfbbf1348138526187366" name="a750c356ef6acfbbf1348138526187366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750c356ef6acfbbf1348138526187366">&#9670;&#160;</a></span>INVERTE_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INVERTE_BIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bit&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte ^= (1 &lt;&lt; bit)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d98f38f8ff426ce97811db75d6f8ac6" name="a8d98f38f8ff426ce97811db75d6f8ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d98f38f8ff426ce97811db75d6f8ac6">&#9670;&#160;</a></span>SETA_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SETA_BIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bit&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte |= (1 &lt;&lt; bit)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a915487ac505d959a83995c1c2cb87b4d" name="a915487ac505d959a83995c1c2cb87b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a915487ac505d959a83995c1c2cb87b4d">&#9670;&#160;</a></span>ZERA_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZERA_BIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bit&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte &amp;= ~(1 &lt;&lt; bit)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="ab9fe2bd2b884eb1f0754d2ef58af691d" name="ab9fe2bd2b884eb1f0754d2ef58af691d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fe2bd2b884eb1f0754d2ef58af691d">&#9670;&#160;</a></span>InitAdc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitAdc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
+<div class="line"><span class="lineno">   33</span>  ADMUX |= (1&lt;&lt;REFS0);</div>
+<div class="line"><span class="lineno">   34</span>  ADCSRA |= (1&lt;&lt;ADPS2) | (1&lt;&lt;ADPS1) | (1&lt;&lt;ADPS0) | (1&lt;&lt;ADEN); <span class="comment">//Habilitando o ADC e definindo prescaler para 128.</span></div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>  Serial.begin(9600);</div>
+<div class="line"><span class="lineno">   49</span>  DDRD |= (1&lt;&lt;PD6); <span class="comment">//Define a porta D6 como saída.</span></div>
+<div class="line"><span class="lineno">   50</span>  DDRD |= (1&lt;&lt;PD5); <span class="comment">//Define a porta D5 como saída.</span></div>
+<div class="line"><span class="lineno">   51</span>  </div>
+<div class="line"><span class="lineno">   52</span>  OCR0A = 125;  <span class="comment">//OCR0A pertence a PD6 (MotorEsquerda).</span></div>
+<div class="line"><span class="lineno">   53</span>  OCR0B = 125;  <span class="comment">//OCR0B pertence a PD5 (MotorDireita).</span></div>
+<div class="line"><span class="lineno">   54</span>  </div>
+<div class="line"><span class="lineno">   55</span>  TCCR0A |= (1&lt;&lt;COM0A1) | (1&lt;&lt;WGM01) | (1&lt;&lt;WGM00); <span class="comment">//Non-inverting fast pwm modo 3 Motor Esquerda.</span></div>
+<div class="line"><span class="lineno">   56</span>  TCCR0B |= (1&lt;&lt;CS00); <span class="comment">//No prescaler.</span></div>
+<div class="line"><span class="lineno">   57</span>  </div>
+<div class="line"><span class="lineno">   58</span>  TCCR0A |= (1&lt;&lt;COM0B1) | (1&lt;&lt;WGM01) | (1&lt;&lt;WGM00); <span class="comment">//Non-inverting fast pwm modo 3 Motor Direita.</span></div>
+<div class="line"><span class="lineno">   59</span>  TCCR0B |= (1&lt;&lt;CS00); <span class="comment">//No prescaler.</span></div>
+<div class="line"><span class="lineno">   60</span>  </div>
+<div class="line"><span class="lineno">   61</span>  <a class="code hl_function" href="_codigo__carrinho_8c.html#ab9fe2bd2b884eb1f0754d2ef58af691d">InitAdc</a>();</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">while</span>(1)</div>
+<div class="line"><span class="lineno">   63</span>  {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   65</span><span class="comment">    Serial.print(&quot;motorEsq: &quot;);</span></div>
+<div class="line"><span class="lineno">   66</span><span class="comment">    Serial.println(ReadAdc(0));</span></div>
+<div class="line"><span class="lineno">   67</span><span class="comment">    //Serial.print(&quot;motorMaisEsq: &quot;);</span></div>
+<div class="line"><span class="lineno">   68</span><span class="comment">    //Serial.println(ReadAdc(1));</span></div>
+<div class="line"><span class="lineno">   69</span><span class="comment">    //Serial.print(&quot;motorDir: &quot;);</span></div>
+<div class="line"><span class="lineno">   70</span><span class="comment">    //Serial.println(ReadAdc(2));</span></div>
+<div class="line"><span class="lineno">   71</span><span class="comment">    //Serial.print(&quot;motorMaisDir: &quot;);</span></div>
+<div class="line"><span class="lineno">   72</span><span class="comment">    //Serial.println(ReadAdc(3));</span></div>
+<div class="line"><span class="lineno">   73</span><span class="comment">    delay(5000);</span></div>
+<div class="line"><span class="lineno">   74</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(2) &lt;= 500) &amp;&amp; (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(0) &lt;= 500) &amp;&amp; (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(3) &lt;= 500) &amp;&amp; (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(1) &lt;= 500))</div>
+<div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>      <span class="comment">//velocidadePrincipal = velocidadePrincipal + 60;</span></div>
+<div class="line"><span class="lineno">   78</span>      OCR0A = 70;  <span class="comment">//95 bom valor</span></div>
+<div class="line"><span class="lineno">   79</span>      OCR0B = 70;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(0) &gt;= 500 &amp;&amp; <a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(1) &gt;= 500)</div>
+<div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>      OCR0A = 255;</div>
+<div class="line"><span class="lineno">   85</span>      OCR0B = 0;</div>
+<div class="line"><span class="lineno">   86</span>      _delay_ms(3000);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(2) &gt;= 500 &amp;&amp; <a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(3) &gt;= 500)</div>
+<div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>      OCR0A = 0;</div>
+<div class="line"><span class="lineno">   91</span>      OCR0B = 255;</div>
+<div class="line"><span class="lineno">   92</span>      _delay_ms(3000);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">/* else if (ReadAdc(0) &gt;= 500 &amp;&amp; ReadAdc(1) &gt;= 500)</span></div>
+<div class="line"><span class="lineno">   95</span><span class="comment">    {</span></div>
+<div class="line"><span class="lineno">   96</span><span class="comment">      OCR0A = 255;</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment">      OCR0B = 15;</span></div>
+<div class="line"><span class="lineno">   98</span><span class="comment">      _delay_ms(750);</span></div>
+<div class="line"><span class="lineno">   99</span><span class="comment">    }</span></div>
+<div class="line"><span class="lineno">  100</span><span class="comment">    else if (ReadAdc(2) &gt;= 500 &amp;&amp; ReadAdc(3) &gt;= 500)</span></div>
+<div class="line"><span class="lineno">  101</span><span class="comment">    {</span></div>
+<div class="line"><span class="lineno">  102</span><span class="comment">      OCR0A = 15;</span></div>
+<div class="line"><span class="lineno">  103</span><span class="comment">      OCR0B = 255;</span></div>
+<div class="line"><span class="lineno">  104</span><span class="comment">      _delay_ms(750);</span></div>
+<div class="line"><span class="lineno">  105</span><span class="comment">    }*/</span></div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(0) &gt;= 500) <span class="comment">//Sensor Esquerdo</span></div>
+<div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>      OCR0A = 127;</div>
+<div class="line"><span class="lineno">  109</span>      OCR0B = 40;</div>
+<div class="line"><span class="lineno">  110</span>      <span class="comment">//_delay_ms(200);</span></div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(2) &gt;= 500) <span class="comment">//Sensor Direito</span></div>
+<div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>      OCR0A = 40;     <span class="comment">//25 foi bem</span></div>
+<div class="line"><span class="lineno">  115</span>      OCR0B = 127;</div>
+<div class="line"><span class="lineno">  116</span>      <span class="comment">//_delay_ms(200);</span></div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(1) &gt;= 500) <span class="comment">//Sensor MaisEsquerdo</span></div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>      OCR0A = 255;</div>
+<div class="line"><span class="lineno">  121</span>      OCR0B = 0;</div>
+<div class="line"><span class="lineno">  122</span>      _delay_ms(700);</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a>(3) &gt;= 500) <span class="comment">//Sensor MaisDireito</span></div>
+<div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>      OCR0A = 0;</div>
+<div class="line"><span class="lineno">  127</span>      OCR0B = 255;</div>
+<div class="line"><span class="lineno">  128</span>      _delay_ms(700);</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span>    <span class="comment">//valorSensorEsq = ReadAdc(0);</span></div>
+<div class="line"><span class="lineno">  131</span>    <span class="comment">//valorSensorMaisEsq = ReadAdc(1);</span></div>
+<div class="line"><span class="lineno">  132</span>    <span class="comment">//valorSensorDir = ReadAdc(2);</span></div>
+<div class="line"><span class="lineno">  133</span>    <span class="comment">//valorSensorMaisDir = ReadAdc(3);</span></div>
+<div class="line"><span class="lineno">  134</span>  }</div>
+<div class="line"><span class="lineno">  135</span>}</div>
+<div class="ttc" id="a_codigo__carrinho_8c_html_a8d4f7a0b8addd84785fcf6be3b96a92f"><div class="ttname"><a href="_codigo__carrinho_8c.html#a8d4f7a0b8addd84785fcf6be3b96a92f">ReadAdc</a></div><div class="ttdeci">uint16_t ReadAdc(uint8_t ADCchanel)</div><div class="ttdef"><b>Definition:</b> Codigo_carrinho.c:37</div></div>
+<div class="ttc" id="a_codigo__carrinho_8c_html_ab9fe2bd2b884eb1f0754d2ef58af691d"><div class="ttname"><a href="_codigo__carrinho_8c.html#ab9fe2bd2b884eb1f0754d2ef58af691d">InitAdc</a></div><div class="ttdeci">void InitAdc()</div><div class="ttdef"><b>Definition:</b> Codigo_carrinho.c:31</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8d4f7a0b8addd84785fcf6be3b96a92f" name="a8d4f7a0b8addd84785fcf6be3b96a92f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4f7a0b8addd84785fcf6be3b96a92f">&#9670;&#160;</a></span>ReadAdc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ReadAdc </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ADCchanel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{</div>
+<div class="line"><span class="lineno">   39</span>  ADMUX = (ADMUX &amp; 0xF0) | (ADCchanel &amp; 0x0F);</div>
+<div class="line"><span class="lineno">   40</span>  ADCSRA |= (1&lt;&lt;ADSC); <span class="comment">//Single mode.</span></div>
+<div class="line"><span class="lineno">   41</span>  </div>
+<div class="line"><span class="lineno">   42</span>  <span class="keywordflow">while</span> (ADCSRA &amp; (1&lt;&lt;ADSC));</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">return</span> ADC;</div>
+<div class="line"><span class="lineno">   44</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variáveis</h2>
+<a id="aaae26197d9d59c2e7addaa9d46e87a71" name="aaae26197d9d59c2e7addaa9d46e87a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae26197d9d59c2e7addaa9d46e87a71">&#9670;&#160;</a></span>valorSensorDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int valorSensorDir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f7a8f84bf03e494e67ba7c9c74c71f9" name="a6f7a8f84bf03e494e67ba7c9c74c71f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7a8f84bf03e494e67ba7c9c74c71f9">&#9670;&#160;</a></span>valorSensorEsq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int valorSensorEsq</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92d4c64c455a9b96333a519cb0a65c6a" name="a92d4c64c455a9b96333a519cb0a65c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d4c64c455a9b96333a519cb0a65c6a">&#9670;&#160;</a></span>valorSensorMaisDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int valorSensorMaisDir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a419f59a0391f7b955265aa109d51e543" name="a419f59a0391f7b955265aa109d51e543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419f59a0391f7b955265aa109d51e543">&#9670;&#160;</a></span>valorSensorMaisEsq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int valorSensorMaisEsq</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25a73c34d1c6d2261ef44a860d3a4d44" name="a25a73c34d1c6d2261ef44a860d3a4d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a73c34d1c6d2261ef44a860d3a4d44">&#9670;&#160;</a></span>velocidadePrincipal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int velocidadePrincipal = 60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
