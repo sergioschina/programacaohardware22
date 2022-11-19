@@ -1,0 +1,11 @@
+Lista de Componentes utilizados
+1x Arduino UNO R3
+2x Transistor TIP120
+2x Diodo 1n4007
+2x Resistor 4.7Konhs
+2x Sensor de Obstáculos Reflexivo Infravermelho
+1x Placa PCB
+2x Motores DC 6V
+4x Pilhas
+1x Chave 2 posições
+
